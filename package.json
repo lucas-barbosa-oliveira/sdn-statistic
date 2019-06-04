@@ -12,6 +12,7 @@
     "csv-parser": "^2.3.0",
     "csvtojson": "^2.0.8",
     "fs": "0.0.1-security",
+    "make-dir": "^3.0.0",
     "objects-to-csv": "^1.2.1"
   }
 }
