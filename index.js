@@ -1,22 +1,14 @@
-const fs = require('fs')
-const csv = require('csvtojson')
+const fs = require('fs');
+const csv = require('csvtojson');
 const ObjectsToCsv = require('objects-to-csv');
 const makeDir = require('make-dir');
-
-const allMeasurements = [];
-
-const resultMeasurements = [];
-
-var measurement;
-
-// var path = __dirname;
-// var paths = '/home/lucas/Documentos/Tesde_FINAL/100/1-UDP_e_TCP/'
+const del = require('delete');
 
 var pathName = '/home/lucas/Documentos/Mestrado/estrutura_dos_testes/'
 
 var folders =
     ['100/1-UDP_e_TCP/com_sdn/bandwidth/',
-        '100/1-UDP_e_TCP/com_sdn/pacage/',
+        '100/1-UDP_e_TCP/com_sdn/package/',
         '100/1-UDP_e_TCP/sem_sdn/bandwidth/',
         '100/1-UDP_e_TCP/sem_sdn/package/',
         '100/2-UDP_e_UDP/com_sdn/bandwidth/',
@@ -48,6 +40,8 @@ async function asyncForEach(array, callback) {
 
 function readFile(path) {
 
+    var allMeasurements = [];
+
     return new Promise((resolve,reject) => {
         fs.readdir(path, async function (err, files) {
             //handling error
@@ -70,7 +64,7 @@ function readFile(path) {
 
                 allMeasurements.push(jsonArray)
             }).then(() => {
-                return resolve()
+                return resolve(allMeasurements)
             }).catch((err) => {
                 return reject(err.message);
             });
@@ -79,11 +73,14 @@ function readFile(path) {
 
 }
 
-async function measurementsAverage() {
+async function measurementsAverage(allMeasurements) {
     var sum = 0;
+    var measurement;
+    var resultMeasurements = [];
 
-    for (i = 0; i < allMeasurements[0].length; i++) {
-        for (j = 0; j < allMeasurements.length; j++) {
+
+    for (var i = 0; i < allMeasurements[0].length; i++) {
+        for (var j = 0; j < allMeasurements.length; j++) {
             if (!measurement) {
                 measurement = allMeasurements[j][i]
             } else {
@@ -91,6 +88,9 @@ async function measurementsAverage() {
                     if (key !== "Interval start") {
                         measurement[key] = parseFloat(measurement[key], 10) + parseFloat(allMeasurements[j][i][key], 10)
                     }
+                }).catch((err) => {
+                    console.log(err)
+                    console.log('i: ' + i + ', j: ' + j)
                 })
             }
             sum++
@@ -104,11 +104,16 @@ async function measurementsAverage() {
         resultMeasurements.push(measurement)
         measurement = undefined
         sum = 0
+
+
     }
+    return  resultMeasurements;
+
 }
 
-function saveFile(path) {
-    // console.log(resultMeasurements);
+function saveFile(path, resultMeasurements) {
+    del.sync(path +'measurementsAverage.csv', {force: true});
+
     (async () => {
         let csv = new ObjectsToCsv(resultMeasurements);
 
@@ -125,19 +130,19 @@ function saveFile(path) {
 async function createDirectories() {
 
     await asyncForEach(folders, async function (folder) {
-        if (!fs.existsSync(pathName + 'dir/' + folder)) {
-            const path = await makeDir(pathName + 'dir/' + folder);
+        if (!fs.existsSync(pathName + folder)) {
+            const path = await makeDir(pathName + folder);
             console.log(path);
         }
     })
 
 }
 
-function readDirectories() {
-    folders.forEach(async folder => {
-        await readFile(pathName + folder).then(async () => {
-            await measurementsAverage();
-            await saveFile(pathName + folder);
+async function readDirectories() {
+    await asyncForEach(folders, async function (folder) {
+        readFile(pathName + folder).then(async (allMeasurements) => {
+            var resultMeasurements = await measurementsAverage(allMeasurements);
+            await saveFile(pathName + folder, resultMeasurements);
         }).catch((err) => {
             console.log(err)
         })
