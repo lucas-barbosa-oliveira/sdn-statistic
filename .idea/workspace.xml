@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4c447d2-fbc8-4796-afdc-87cedd65a57d" name="Default Changelist" comment="" />
+    <list default="true" id="e4c447d2-fbc8-4796-afdc-87cedd65a57d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -25,38 +27,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+            <state relative-caret-position="263">
+              <caret line="87" column="51" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
               <folding>
-                <element signature="e#334#1406#0" />
-                <element signature="n#!!block;n#asyncForEach#0" />
-                <element signature="e#1510#1569#0" />
-                <element signature="n#!!block;n#readFile#0" />
-                <element signature="e#1674#2566#0" />
-                <element signature="e#1729#2558#0" />
-                <element signature="e#1781#1868#0" />
-                <element signature="e#2080#2394#0" />
-                <element signature="e#2407#2470#0" />
-                <element signature="e#2487#2546#0" />
-                <element signature="n#!!block;n#measurementsAverage#0" />
-                <element signature="e#2752#3699#0" />
-                <element signature="e#2807#3393#0" />
-                <element signature="e#2839#2906#0" />
-                <element signature="e#2912#3365#0" />
-                <element signature="e#3006#3220#0" />
-                <element signature="e#3058#3202#0" />
-                <element signature="e#3237#3350#0" />
-                <element signature="e#3469#3596#0" />
                 <element signature="n#!!block;n#saveFile#0" />
-                <element signature="e#3839#4135#0" />
                 <element signature="n#!!block;n#createDirectories#0" />
-                <element signature="e#4237#4393#0" />
-                <element signature="e#4286#4387#0" />
                 <element signature="n#!!block;n#readDirectories#0" />
-                <element signature="e#4490#4783#0" />
-                <element signature="e#4560#4719#0" />
-                <element signature="e#4736#4776#0" />
-                <element signature="e#4814#4877#0" />
               </folding>
             </state>
           </provider>
@@ -92,8 +68,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="33" />
     <option name="y" value="24" />
-    <option name="width" value="1333" />
-    <option name="height" value="744" />
+    <option name="width" value="1337" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -101,23 +77,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="sdn-statistic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sdn-statistic" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -152,16 +119,20 @@
       <workItem from="1559651722078" duration="6054000" />
       <workItem from="1559659892239" duration="11248000" />
       <workItem from="1559737945993" duration="2582000" />
+      <workItem from="1559820256146" duration="1611000" />
+      <workItem from="1559879971781" duration="869000" />
+      <workItem from="1560180305831" duration="1171000" />
+      <workItem from="1560515570526" duration="27000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43733000" />
+    <option name="totallyTimeSpent" value="48719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="33" y="-4" width="1333" height="772" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24961832" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24961832" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -174,7 +145,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28998506" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2600897" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -203,6 +174,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$USER_HOME$/WebstormProjects/monitoring-center-script/index.js" />
+      </list>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tsconfig.json" />
@@ -227,13 +203,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.ts" />
     <entry file="file://$PROJECT_DIR$/src/file.reader.ts" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/delete/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -248,9 +217,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/measurementsAverage.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/measurementsAverage.txt" />
     <entry file="file://$PROJECT_DIR$/node_modules/csvtojson/v2/Converter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -272,40 +239,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        <state relative-caret-position="263">
+          <caret line="87" column="51" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
           <folding>
-            <element signature="e#334#1406#0" />
-            <element signature="n#!!block;n#asyncForEach#0" />
-            <element signature="e#1510#1569#0" />
-            <element signature="n#!!block;n#readFile#0" />
-            <element signature="e#1674#2566#0" />
-            <element signature="e#1729#2558#0" />
-            <element signature="e#1781#1868#0" />
-            <element signature="e#2080#2394#0" />
-            <element signature="e#2407#2470#0" />
-            <element signature="e#2487#2546#0" />
-            <element signature="n#!!block;n#measurementsAverage#0" />
-            <element signature="e#2752#3699#0" />
-            <element signature="e#2807#3393#0" />
-            <element signature="e#2839#2906#0" />
-            <element signature="e#2912#3365#0" />
-            <element signature="e#3006#3220#0" />
-            <element signature="e#3058#3202#0" />
-            <element signature="e#3237#3350#0" />
-            <element signature="e#3469#3596#0" />
             <element signature="n#!!block;n#saveFile#0" />
-            <element signature="e#3839#4135#0" />
             <element signature="n#!!block;n#createDirectories#0" />
-            <element signature="e#4237#4393#0" />
-            <element signature="e#4286#4387#0" />
             <element signature="n#!!block;n#readDirectories#0" />
-            <element signature="e#4490#4783#0" />
-            <element signature="e#4560#4719#0" />
-            <element signature="e#4736#4776#0" />
-            <element signature="e#4814#4877#0" />
           </folding>
         </state>
       </provider>
