@@ -7,30 +7,81 @@ const del = require('delete');
 var pathName = '/home/lucas/Documentos/Mestrado/estrutura_dos_testes/'
 
 var folders =
-    ['100/1-UDP_e_TCP/com_sdn/bandwidth/',
-        '100/1-UDP_e_TCP/com_sdn/package/',
-        '100/1-UDP_e_TCP/sem_sdn/bandwidth/',
-        '100/1-UDP_e_TCP/sem_sdn/package/',
+    [
+        '100/1-UDP_e_TCP/com_sdn/bandwidth/dispositivos/',
+        '100/1-UDP_e_TCP/com_sdn/bandwidth/protocolos/',
+        '100/1-UDP_e_TCP/com_sdn/package/dispositivos/',
+        '100/1-UDP_e_TCP/com_sdn/package/protocolos/',
+        '100/1-UDP_e_TCP/com_sdn/gerais/dicom/',
+        '100/1-UDP_e_TCP/com_sdn/gerais/dispositivos_medicos/',
+        '100/1-UDP_e_TCP/com_sdn/gerais/geral/',
+        '100/1-UDP_e_TCP/com_sdn/gerais/servidor_udp/',
+        '100/1-UDP_e_TCP/com_sdn/gerais/tcp/',
+        '100/1-UDP_e_TCP/com_sdn/gerais/udp/',
+
+        '100/1-UDP_e_TCP/sem_sdn/bandwidth/dispositivos/',
+        '100/1-UDP_e_TCP/sem_sdn/bandwidth/protocolos/',
+        '100/1-UDP_e_TCP/sem_sdn/package/dispositivos/',
+        '100/1-UDP_e_TCP/sem_sdn/package/protocolos/',
+        '100/1-UDP_e_TCP/sem_sdn/gerais/dicom/',
+        '100/1-UDP_e_TCP/sem_sdn/gerais/dispositivos_medicos/',
+        '100/1-UDP_e_TCP/sem_sdn/gerais/geral/',
+        '100/1-UDP_e_TCP/sem_sdn/gerais/servidor_udp/',
+        '100/1-UDP_e_TCP/sem_sdn/gerais/tcp/',
+        '100/1-UDP_e_TCP/sem_sdn/gerais/udp/',
+
         '100/2-UDP_e_UDP/com_sdn/bandwidth/',
         '100/2-UDP_e_UDP/com_sdn/package/',
+        '100/2-UDP_e_UDP/com_sdn/gerais/chamadas_voip/',
+        '100/2-UDP_e_UDP/com_sdn/gerais/dispositivos_medicos/',
+        '100/2-UDP_e_UDP/com_sdn/gerais/geral/',
+        '100/2-UDP_e_UDP/com_sdn/gerais/servidor_udp/',
+
         '100/2-UDP_e_UDP/sem_sdn/bandwidth/',
         '100/2-UDP_e_UDP/sem_sdn/package/',
-        '100/3-TCP_e_TCP/com_sdn/bandwidth/',
-        '100/3-TCP_e_TCP/com_sdn/package/',
-        '100/3-TCP_e_TCP/sem_sdn/bandwidth/',
-        '100/3-TCP_e_TCP/sem_sdn/package/',
-        '500/1-UDP_e_TCP/com_sdn/bandwidth/',
-        '500/1-UDP_e_TCP/com_sdn/package/',
-        '500/1-UDP_e_TCP/sem_sdn/bandwidth/',
-        '500/1-UDP_e_TCP/sem_sdn/package/',
+        '100/2-UDP_e_UDP/sem_sdn/gerais/chamadas_voip/',
+        '100/2-UDP_e_UDP/sem_sdn/gerais/dispositivos_medicos/',
+        '100/2-UDP_e_UDP/sem_sdn/gerais/geral/',
+        '100/2-UDP_e_UDP/sem_sdn/gerais/servidor_udp/',
+
+
+
+        '500/1-UDP_e_TCP/com_sdn/bandwidth/dispositivos/',
+        '500/1-UDP_e_TCP/com_sdn/bandwidth/protocolos/',
+        '500/1-UDP_e_TCP/com_sdn/package/dispositivos/',
+        '500/1-UDP_e_TCP/com_sdn/package/protocolos/',
+        '500/1-UDP_e_TCP/com_sdn/gerais/dicom/',
+        '500/1-UDP_e_TCP/com_sdn/gerais/dispositivos_medicos/',
+        '500/1-UDP_e_TCP/com_sdn/gerais/geral/',
+        '500/1-UDP_e_TCP/com_sdn/gerais/servidor_udp/',
+        '500/1-UDP_e_TCP/com_sdn/gerais/tcp/',
+        '500/1-UDP_e_TCP/com_sdn/gerais/udp/',
+
+        '500/1-UDP_e_TCP/sem_sdn/bandwidth/dispositivos/',
+        '500/1-UDP_e_TCP/sem_sdn/bandwidth/protocolos/',
+        '500/1-UDP_e_TCP/sem_sdn/package/dispositivos/',
+        '500/1-UDP_e_TCP/sem_sdn/package/protocolos/',
+        '500/1-UDP_e_TCP/sem_sdn/gerais/dicom/',
+        '500/1-UDP_e_TCP/sem_sdn/gerais/dispositivos_medicos/',
+        '500/1-UDP_e_TCP/sem_sdn/gerais/geral/',
+        '500/1-UDP_e_TCP/sem_sdn/gerais/servidor_udp/',
+        '500/1-UDP_e_TCP/sem_sdn/gerais/tcp/',
+        '500/1-UDP_e_TCP/sem_sdn/gerais/udp/',
+
         '500/2-UDP_e_UDP/com_sdn/bandwidth/',
         '500/2-UDP_e_UDP/com_sdn/package/',
+        '500/2-UDP_e_UDP/com_sdn/gerais/chamadas_voip/',
+        '500/2-UDP_e_UDP/com_sdn/gerais/dispositivos_medicos/',
+        '500/2-UDP_e_UDP/com_sdn/gerais/geral/',
+        '500/2-UDP_e_UDP/com_sdn/gerais/servidor_udp/',
+
         '500/2-UDP_e_UDP/sem_sdn/bandwidth/',
         '500/2-UDP_e_UDP/sem_sdn/package/',
-        '500/3-TCP_e_TCP/com_sdn/bandwidth/',
-        '500/3-TCP_e_TCP/com_sdn/package/',
-        '500/3-TCP_e_TCP/sem_sdn/bandwidth/',
-        '500/3-TCP_e_TCP/sem_sdn/package/']
+        '500/2-UDP_e_UDP/sem_sdn/gerais/chamadas_voip/',
+        '500/2-UDP_e_UDP/sem_sdn/gerais/dispositivos_medicos/',
+        '500/2-UDP_e_UDP/sem_sdn/gerais/geral/',
+        '500/2-UDP_e_UDP/sem_sdn/gerais/servidor_udp/',
+]
 
 async function asyncForEach(array, callback) {
     for (let index = 0; index < array.length; index++) {
@@ -79,7 +130,13 @@ async function measurementsAverage(allMeasurements) {
     var resultMeasurements = [];
 
 
-    for (var i = 0; i < allMeasurements[0].length; i++) {
+    var limitRow = allMeasurements[0].length;
+
+    if (allMeasurements[0].length > 150){
+        limitRow = 150;
+    }
+
+    for (var i = 0; i < limitRow; i++) {
         for (var j = 0; j < allMeasurements.length; j++) {
             if (!measurement) {
                 measurement = allMeasurements[j][i]
